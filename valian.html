@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Project</title>
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-['Poppins']">
+
+    <!-- Start Navbar -->
+    <section id="nav" class="navbar w-full z-[999] bg-transparent py-4 fixed bg-white border-black border-b-2">
+        <div class="flex flex-row">
+            <div class="logo basis-1/6 flex justify-center ">
+                <a href="#hero">
+                    <img class="h-6 md:h-8 sm:ml-0 ml-4" src="/image/v1.png" alt="V Logo">
+                </a>
+            </div>
+            <div class="nav-item basis-5/6 flex items-center justify-end sm:justify-normal text-black">
+                <div
+                    class="nav-kanan duration-500 text-sm md:text-lg space-x-7 md:space-x-12 font-semibold sm:font-medium sm:flex justify-center top-[-600%] left-0 sm:min-h-fit sm:static absolute w-screen sm:w-auto sm:bg-none p-7 sm:p-0">
+                    <ul class="flex sm:flex-row flex-col ml-2 gap-10">
+                        <li><a href="#">HOME</a></li>
+                        <li><a href="#">ABOUT</a></li>
+                        <li><a href="#">WORK</a></li>
+                        <li><a href="#">EXPERIENCE</a></li>
+                        <li><a href="#">FOOTER</a></li>
+                    </ul>
+                </div>
+                <ion-icon onclick="onToggle(this)" name="menu" class="text-3xl hover:cursor-pointer sm:hidden mr-10">
+                </ion-icon>
+            </div>
+        </div>
+    </section>
+    <!-- End Navbar -->
+
+
+    <!-- Start Hero -->
+    <section id="hero" class="hero w-screen h-screen flex justify-center items-center">
+        <div class="container box w-full lg:w-11/12 h-4/5 lg:h-auto lg:bg-gradient-to-r from-[#09203F] to-[#537895] rounded-2xl flex flex-col-reverse lg:flex-row">
+            <div class="flex w-full lg:w-2/3 lg:text-white text-black p-0 lg:p-32 flex-col justify-center">
+                <div class="text text-center lg:text-start">
+                    <p class="text-md lg:text-lg">Hello!👋 My Name is</p>
+                    <p class="text-4xl lg:text-5xl mt-4 font-semibold">Vallian Sayoga Chandra</p>
+                    <p class="text-2xl mt-5">Junior Web Developer</p>
+                    <p class="text-sm mt-6 hidden lg:block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ad,
+                        aspernatur odit facere deleniti fugit laudantium, qui magnam dicta error assumenda adipisci
+                        laborum quos tempora dolorem nobis alias sunt, architecto libero maiores officia repudiandae
+                        corrupti veniam mollitia. Iusto cum aliquam illum quasi optio consequatur architecto laboriosam
+                        hic explicabo. Quia, possimus?</p>
+                </div>
+            </div>
+            <div class="flex w-full lg:w-1/3 text-white items-center justify-center lg:justify-start lg:mb-0 mb-7">
+                <img class="w-80 rounded-lg" src="/image/valian-sungai.png" alt="Me">
+            </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+
+    <!-- Start About -->
+    <section id="about" class="about w-screen h-[120vh] lg:h-screen flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row justify-center items-center">
+            <div class="w-1/2">
+                <img class="w-full" src="/image/valian-about.png" alt="About">
+            </div>
+            <div class="w-full lg:w-1/2 p-10 flex flex-col justify-center">
+                <p class="text-3xl font-bold">ABOUT ME</p>
+                <p class="font-medium mt-16">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores
+                    natus inventore, laborum doloremque, sed numquam nesciunt, libero vitae dicta modi perferendis eum. Unde
+                    tempora a officiis eum repellat impedit voluptatum veritatis atque! Accusamus, quod eius obcaecati, vel,
+                    alias omnis fugiat adipisci tempora consequatur sit illum aut praesentium voluptates id impedit.
+                    Reprehenderit architecto delectus non?</p>
+                <br>
+                <p class="font-medium hidden lg:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores natus
+                    inventore, laborum doloremque, sed numquam nesciunt, libero vitae dicta modi perferendis eum. Unde
+                    tempora a officiis eum repellat impedit voluptatum veritatis atque! Accusamus, quod eius obcaecati, vel,
+                    alias omnis fugiat adipisci tempora consequatur sit illum aut praesentium voluptates id impedit.
+                    Reprehenderit architecto delectus non?</p>
+                <br>
+                <p class="font-medium hidden lg:block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi asperiores natus
+                    inventore, laborum doloremque, sed numquam nesciunt, libero vitae dicta modi perferendis eum. Unde
+                    tempora a officiis eum repellat impedit voluptatum veritatis atque! Accusamus, quod eius obcaecati, vel,
+                    alias omnis fugiat adipisci tempora consequatur sit illum aut praesentium voluptates id impedit.
+                    Reprehenderit architecto delectus non?</p>
+    
+            </div>
+        </div>
+    </section>
+    <!-- End About -->
+
+
+    <!-- Start Work -->
+    <section id="work" class="work h-[80vh] w-screen items-center flex justify-center">
+        <div class="flex flex-col lg:flex-row space-x-6 justify-center items-center space-y-6">
+            <div class="card lg:w-1/4 w-3/5 flex flex-col border-2 border-black pb-5 rounded-md text-center items-center justify-center mt-6 ml-6">
+                <div class="image">
+                    <img class="rounded-sm border-b-2 border-gray-500" src="/image/portoo.png" alt="Portfolio">
+                </div>
+                <p class="text-xl font-semibold mt-3">Portfolio Project</p>
+                <a class="border-2 border-black rounded w-1/2 mt-4 py-2" href="#">Click here</a>
+            </div>
+
+            <div class="card lg:w-1/4 w-3/5 flex flex-col border-2 border-black pb-5 rounded-md text-center items-center justify-center">
+                <div class="image">
+                    <img class="rounded-sm" src="/image/neymar.png" alt="Neymar">
+                </div>
+                <p class="text-xl font-semibold mt-3">Bootstrap Project</p>
+                <a class="border-2 border-black rounded w-1/2 mt-4 py-2" href="#">Click here</a>
+            </div>
+
+            <div class="card lg:w-1/4 w-3/5 flex flex-col border-2 border-black pb-5 rounded-md text-center items-center justify-center mr-6">
+                <div class="image">
+                    <img class="rounded-sm" src="/image/romaa.png" alt="Jose Mourinho">
+                </div>
+                <p class="text-xl font-semibold mt-3">Tailwind Project</p>
+                <a class="border-2 border-black rounded w-1/2 mt-4 py-2" href="#">Click here</a>
+            </div>
+        </div>
+    </section>
+    <!-- End Work -->
+
+
+    <!-- Start Timeline -->
+    <section id="timeline" class="timeline flex items-center justify-center h-[90vh] w-screen lg:mt-0 mt-36">
+        <div class="flex w-full lg:w-1/2 lg:h-full h-auto justify-center items-center">
+            <ol class="relative border-s-2 border-gray-200 dark:border-gray-600 ms-3.5 mb-4 md:mb-5 scale-100 lg:scale-[1.33]">
+                <li class="mb-10 ms-8">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                        <svg class="w-2.5 h-2.5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path fill="currentColor"
+                                d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <h3 class="flex items-start mb-1 text-lg font-semibold text-gray-900 dark:text-black">Google
+                        Developer Groups Event</h3>
+                    <time
+                        class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">2023-2024</time>
+                    <button type="button" class="inline-flex items-center py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-600">
+                        Click Here
+                    </button>
+                </li>
+
+                <li class="mb-10 ms-8">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                        <svg class="w-2.5 h-2.5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path fill="currentColor"
+                                d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-black">Self Project Portfolio</h3>
+                    <time
+                        class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">2023-2024</time>
+                    <button type="button"
+                        class="inline-flex items-center py-2 px-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-600">
+                        Portfolio Here
+                    </button>
+                </li>
+
+                <li class="mb-10 ms-8">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                        <svg class="w-2.5 h-2.5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                            <path fill="currentColor"
+                                d="M6 1a1 1 0 0 0-2 0h2ZM4 4a1 1 0 0 0 2 0H4Zm7-3a1 1 0 1 0-2 0h2ZM9 4a1 1 0 1 0 2 0H9Zm7-3a1 1 0 1 0-2 0h2Zm-2 3a1 1 0 1 0 2 0h-2ZM1 6a1 1 0 0 0 0 2V6Zm18 2a1 1 0 1 0 0-2v2ZM5 11v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 11v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM10 15v-1H9v1h1Zm0 .01H9v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 15v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM15 11v-1h-1v1h1Zm0 .01h-1v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM5 15v-1H4v1h1Zm0 .01H4v1h1v-1Zm.01 0v1h1v-1h-1Zm0-.01h1v-1h-1v1ZM2 4h16V2H2v2Zm16 0h2a2 2 0 0 0-2-2v2Zm0 0v14h2V4h-2Zm0 14v2a2 2 0 0 0 2-2h-2Zm0 0H2v2h16v-2ZM2 18H0a2 2 0 0 0 2 2v-2Zm0 0V4H0v14h2ZM2 4V2a2 2 0 0 0-2 2h2Zm2-3v3h2V1H4Zm5 0v3h2V1H9Zm5 0v3h2V1h-2ZM1 8h18V6H1v2Zm3 3v.01h2V11H4Zm1 1.01h.01v-2H5v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H5v2h.01v-2ZM9 11v.01h2V11H9Zm1 1.01h.01v-2H10v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM9 15v.01h2V15H9Zm1 1.01h.01v-2H10v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H10v2h.01v-2ZM14 15v.01h2V15h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM14 11v.01h2V11h-2Zm1 1.01h.01v-2H15v2Zm1.01-1V11h-2v.01h2Zm-1-1.01H15v2h.01v-2ZM4 15v.01h2V15H4Zm1 1.01h.01v-2H5v2Zm1.01-1V15h-2v.01h2Zm-1-1.01H5v2h.01v-2Z">
+                            </path>
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-black">IDN Teaching</h3>
+                    <time class="block mb-3 text-sm font-normal leading-none text-gray-500 dark:text-gray-400">2022-2023
+                        / 2023-2024</time>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex w-0 lg:w-1/2 h-0 lg:h-full">
+            <img class="lg:w-full w-0 lg:h-full h-0 hidden lg:block" src="/image/experiennee.png" alt="Timeline">
+        </div>
+    </section>
+    <!-- End Timeline -->
+
+
+    <!-- Start Footer -->
+    <section id="footer" class="footer w-screen mt-20">
+
+        <footer class="bg-white dark:bg-gray-900 self-end">
+            <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+                <div class="md:flex md:justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <a href="https://vallianaja.github.io/" class="flex items-center" target="_blank">
+                            <img src="/image/v2.png" class="h-8 me-3"
+                                alt="V Logo" />
+                            <span
+                                class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Portfolio Web</span>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                </li>
+                                <li>
+                                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="https://github.com/themesberg/flowbite"
+                                        class="hover:underline ">Github</a>
+                                </li>
+                                <li>
+                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Legal
+                            </h2>
+                            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                                <li class="mb-4">
+                                    <a href="#" class="hover:underline">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+                <div class="sm:flex sm:items-center sm:justify-between">
+                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
+                            href="#" class="hover:underline">Vallian</a>. All Rights Reserved.
+                    </span>
+                    <div class="flex mt-4 sm:justify-center sm:mt-0">
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 8 19">
+                                <path fill-rule="evenodd"
+                                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Facebook page</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 21 16">
+                                <path
+                                    d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                            </svg>
+                            <span class="sr-only">Discord community</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 20 17">
+                                <path fill-rule="evenodd"
+                                    d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Twitter page</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">GitHub account</span>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5">
+                            <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd"
+                                    d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span class="sr-only">Dribbble account</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </section>
+    <!-- End Footer -->
+
+
+    <!-- Start JS -->
+    <script>
+        const navItems = document.querySelector('.nav-kanan')
+
+        function onToggle(e) {
+            e.name = e.name === 'menu' ? 'close' : 'menu'
+            navItems.classList.toggle('top-[106%]')
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+    <!-- End JS -->
+</body>
+
+</html>
