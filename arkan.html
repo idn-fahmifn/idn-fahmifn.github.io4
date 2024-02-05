@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+</head>
+<style>
+    .buat-img {
+        background-image: url(image/gdgbogor.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .buatIMG {
+        background-image: url(image/GDGJakarta.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .buatIMG2 {
+        background-image: url(image/edurace.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .buatIMG3 {
+        background-image: url(image/idnmengajar.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
+<body>
+    <!-- Responsive Web -->
+    <!-- Start Navbar -->
+
+    <!-- Navbar -->
+
+    <section class="fixed w-full" id="navbar">
+        <nav class="shadow py-5 flex justify-around items-center bg-white">
+            <div class="logo">
+                <h1 class="font-bold font-[Poppins] text-xl">e-Portfolio</h1>
+            </div>
+            <div
+                class="nav-items md:min-h-fit top-24 left-[-24%] w-auto md:flex justify-center md:static absolute duration-300">
+                <ul class="flex md:flex-row flex-col gap-10">
+                    <li><a class="text-sm" href="#about-me">About Me</a></li>
+                    <li><a class="text-sm" href="#card">Experience</a></li>
+                    <li><a class="text-sm" href="#timeline">Education</a></li>
+                </ul>
+            </div>
+            <div class="searchBar">
+                <div class="pt-0 mx-auto text-gray-600 hidden md:flex">
+                    <input
+                        class="border-2 border-gray-300 bg-white h-9 w-40 px-4 pr-0 rounded-lg text-sm focus:outline-none"
+                        type="search" name="search" placeholder="Search">
+                    </input>
+                </div>
+                <ion-icon onclick="onToggle(this)" name="menu" class="text-3xl hover:cursor-pointer md:hidden">
+                </ion-icon>
+            </div>
+        </nav>
+    </section>
+    <!-- end navbar -->
+
+    <!-- about me section -->
+    <section id="about-me" class="pt-3">
+        <div
+            class="container mx-auto w-3/4 h-[80vh] mb-32 mt-28 flex bg-gradient-to-r from-slate-100 to-gray-50 rounded-xl">
+            <div class="div-about w-1/2 flex justify-center flex-col items-center ml-28">
+                <div class="text-area">
+                    <p class="text-2xl font-semibold text-gray-500">Hola👋🏼</p>
+                    <h1 class="text-4xl text-black font-bold">Im, Arkan Naufal</h1>
+                    <p class="mt-1 text-l text-gray-500 font-semibold">Software Engineer</p>
+                    <p class="text-black w-80 mt-2 text-sm">Im Arkan Naufal, a student who has an interest in software
+                        development and web development. im a student of SMK IDN Boarding School.</p>
+                    <div class="my-7 button-portfolio">
+                        <a class="px-10 py-2 text-sm bg-black text-white rounded-[8px] hover:border-gray-400 hover:bg-white  hover:border hover:text-black duration-300"
+                            href="#">Portfolio</a>
+                    </div>
+                </div>
+            </div>
+            <div class="div-pict flex flex-col items-center justify-center">
+                <img class="w-3/6" src="image/pp2.png" alt="photo-profile">
+            </div>
+        </div>
+    </section>
+    <!-- end about me section -->
+
+    <!-- card section -->
+    <section id="card">
+        <div class="buatCard mx-auto flex justify-center items-center w-3/4 h-[80vh] gap-12">
+            <div class="max-w-[24%] h-[44vh] rounded-xl overflow-hidden shadow-xl">
+                <div class="buatIMG bg-slate-400 w-full h-2/4">
+
+                </div>
+                <div class="px-6 py-6">
+                    <div class="font-bold text-xl mb-2">GDG Jakarta</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, porro!
+                    </p>
+                </div>
+                <div class="px-6 pt-2 pb-0">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#GDG</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#Software
+                        Engineer</span>
+                </div>
+            </div>
+            <div class="max-w-[24%] h-[44vh] rounded-xl overflow-hidden shadow-xl">
+                <div class="buatIMG2 bg-slate-400 w-full h-2/4">
+
+                </div>
+                <div class="px-6 py-6">
+                    <div class="font-bold text-xl mb-2">Edurace</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, porro!
+                    </p>
+                </div>
+                <div class="px-6 pt-2 pb-0">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#GDG</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#Software
+                        Engineer</span>
+                </div>
+            </div>
+            <div class="max-w-[24%] h-[44vh] rounded-xl overflow-hidden shadow-xl">
+                <div class="buatIMG3 bg-slate-400 w-full h-2/4">
+
+                </div>
+                <div class="px-6 py-6">
+                    <div class="font-bold text-xl mb-2">IDN Mengajar</div>
+                    <p class="text-gray-700 text-base">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, porro!
+                    </p>
+                </div>
+                <div class="px-6 pt-2 pb-0">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#GDG</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-2 text-sm font-semibold text-gray-700 mr-2 mb-2">#Software
+                        Engineer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end card section -->
+
+    <!-- timeline section -->
+    <section id="timeline" class="pt-32">
+        <div class="buatTimeline mx-auto w-3/4 h-[80vh] flex bg-gradient-to-r from-slate-100 to-gray-50 rounded-xl">
+            <div class="timeline w-1/2 flex justify-center flex-col items-center">
+                <div class="tml w-[50vh] ml-48">
+                    <ol class="relative border-s border-gray-200 dark:border-gray-700 scale-105">
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-dark-100 rounded-full -start-3 ring-8 ring-dark bg-white dark:ring-gray-900 dark:bg-dark-900">
+                                <svg class="w-2.5 h-2.5 text-black dark:text--300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                </svg>
+                            </span>
+                            <h3 class=" ml-3 flex items-center mb-1 text-lg font-bold text-gray-900 dark:text-dark">
+                                Senior High School<span
+                                    class="bg-dark-100 text-dark-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-dark-900 dark:text-dark-300 ms-3">Latest</span>
+                            </h3>
+                            <time
+                                class="block ml-3 mb-2 text-sm font-semibold leading-none text-gray-400 dark:text-gray-500">2023
+                                - 2026</time>
+                            <p class="mb-4 ml-3 text-base font-normal text-gray-500 dark:text-gray-400">
+                                SMK IDN Boarding School</p>
+                        </li>
+                        <li class="mb-10 ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-dark-100 rounded-full -start-3 ring-8 ring-dark bg-white dark:ring-gray-900 dark:bg-dark-900">
+                                <svg class="w-2.5 h-2.5 text-dark-800 dark:text-dark-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                </svg>
+                            </span>
+                            <h3 class="mb-1 ml-3 text-lg font-bold text-gray-900 dark:text-dark">Junior High School</h3>
+                            <time
+                                class="block ml-3 mb-2 text-sm font-semibold leading-none text-gray-400 dark:text-gray-500">2019
+                                - 2023</time>
+                            <p class="text-base ml-3 font-normal text-gray-500 dark:text-gray-400">SMP IDN Boarding
+                                School</p>
+                        </li>
+                        <li class="ms-6">
+                            <span
+                                class="absolute flex items-center justify-center w-6 h-6 bg-dark-100 rounded-full -start-3 ring-8 ring-dark bg-white dark:ring-gray-900 dark:bg-dark-900">
+                                <svg class="w-2.5 h-2.5 text-dark-800 dark:text-dark-300" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                </svg>
+                            </span>
+                            <h3 class="mb-1 ml-3 text-lg font-bold text-gray-900 dark:text-dark">Elementary School
+                            </h3>
+                            <time
+                                class="block mb-2 ml-3 text-sm font-semibold leading-none text-gray-400 dark:text-gray-500">2014
+                                - 2019</time>
+                            <p class="text-base ml-3 font-normal text-gray-500 dark:text-gray-400">SD Islam Teratai
+                                Putih Global</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="imgage w-1/2 max-h-[80vh] flex justify-center flex-col items-center bg-slate-300">
+                <div class="buat-img w-full h-full bg-red-500">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end timeline section -->
+
+    <!-- footer section -->
+    <section id="footer" class="mt-20">
+        <div class="buat-footer bg-slate-100 shadow-sm">
+            <div class="footer w-3/4 h-[6vh] flex mx-auto">
+                <div class="cprg-section w-1/2 bg flex justify-center">
+                    <p class="flex py-5 text-sm text-gray-600">Copyrirght © 2024 Arkan Naufal Ardhani</p>
+                </div>
+                <div class="cprg-section w-1/2 flex justify-center">
+                    <div
+                        class="nav-items md:min-h-fit w-auto py-4 md:flex justify-center md:static absolute duration-300">
+                        <ul class="flex md:flex-row flex-col gap-10">
+                            <li><a class="text-sm text-gray-600" href="#about-me">About Me</a></li>
+                            <li><a class="text-sm text-gray-600" href="#card">Experience</a></li>
+                            <li><a class="text-sm text-gray-600" href="#timeline">Education</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end footer section -->
+
+    <script>
+        const navItems = document.querySelector('.nav-items')
+
+        function onToggle(e) {
+            e.name = e.name == 'menu' ? 'close' : 'menu'
+            navItems.classList.toggle('left-[5%]')
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
