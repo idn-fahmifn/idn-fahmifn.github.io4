@@ -8,7 +8,8 @@
     <link rel="icon" type="image/x-icon" href="image/logo-ha 1.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/ionicons/ionicons.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
@@ -18,8 +19,14 @@
     * {
         scroll-behavior: smooth;
     }
-    .garis{
-    
+
+    .text-item::selection {
+        background: #000;
+        color: #fff;
+    }
+    #text-item::selection {
+        background: #000;
+        color: #fff;
     }
 </style>
 
@@ -30,29 +37,32 @@
 
     <!-- Navbar -->
 
-    <section class="fixed w-full" id="navbar">
+    <section class="w-full fixed" id="navbar">
         <nav class="shadow-sm py-5 bg-white w-full flex justify-around items-center ">
-            <div class="logo ">
+            <div class="logo">
                 <h1 class="font-bold max-w-10"><img src="image/logo-ha 1.png" alt=""></h1>
             </div>
             <div
                 class="nav-items duration-300 md:min-h-fit top-[-400%] left-0 md:w-auto w-full md:flex justify-center md:static absolute bg-white">
                 <ul class="flex md:flex-row flex-col ml-5 gap-10">
-                    <li><a class="hover:underline underline-offset-8 decoration-black w-auto duration-300"
+                    <li><a class="text-item font-semibold hover:underline underline-offset-8 decoration-black w-auto duration-300"
                             href="#hero">Home</a></li>
-                    <li><a class="hover:underline underline-offset-8 decoration-black w-auto duration-300"
+                    <li><a class="text-item font-semibold hover:underline underline-offset-8 decoration-black w-auto duration-300"
                             href="#about">About</a></li>
-                    <li><a class="hover:underline underline-offset-8 decoration-black w-auto duration-300"
+                    <li><a class="text-item font-semibold hover:underline underline-offset-8 decoration-black w-auto duration-300"
                             href="#skill">Skill</a></li>
-                    <li><a class="hover:underline underline-offset-8 decoration-black w-auto duration-300"
+                    <li><a class="text-item font-semibold hover:underline underline-offset-8 decoration-black w-auto duration-300"
                             href="#experience">Experience</a></li>
-                    <li><a class="hover:underline underline-offset-8 decoration-black w-auto duration-300"
+                    <li><a class="text-item font-semibold hover:underline underline-offset-8 decoration-black w-auto duration-300"
                             href="#terakhir">Contact</a></li>
                 </ul>
             </div>
             <div class="button-auth flex justify-center items-center">
                 <a class="border border-black px-5 py-2 rounded-lg hover:bg-black hover:text-white duration-300"
-                    href="#">Register</a>
+                    href="#">
+                    <ion-icon class="flex justify-center items-center text-2xl" name="chatbox-ellipses-outline">
+                    </ion-icon>
+                </a>
                 <ion-icon onclick="onToggle(this)" name="menu" class="text-3xl ml-4 hover:cursor-pointer md:hidden">
                 </ion-icon>
             </div>
@@ -67,20 +77,25 @@
         <div
             class="container bg-gradient-to-r from-slate-100 to-gray-200 shadow-lg shadow-gray-300 flex justify-center items-center w-[100%] h-[77%] mx-auto rounded-3xl">
             <div class="title-area w-1/2 flex flex-col justify-center px-20">
-                <h1 class="text-4xl font-extrabold text-black">Hola 👋🏻</h1>
-                <h1 class="text-4xl font-extrabold text-black">Welcome To My Personal Website</h1><br>
-                <p class="text-xl text-black"> My name is <span class="text-red-600">Haikal Al Fatih</span> you can call
+                <h1 class="text-item text-4xl font-extrabold text-black">Hola 👋🏻</h1>
+                <h1 class="text-item text-4xl font-extrabold text-black">Welcome To My Personal Website</h1><br>
+                <p class="text-item text-xl text-black"> My name is <span class="text-red-600">Haikal Al Fatih</span>
+                    you can call
                     me <span class="text-green-600">Haikal</span> im from XI RPL im live in depok. Im study at SMK IDEEN
                     Boarding School. Contact me ↓</p>
                 <div class="sosmed mt-2 cursor-pointer">
                     <a href="https://www.instagram.com/haikallfth/" target="_blank" rel="noopener noreferrer">
-                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200" name="logo-instagram"></ion-icon>
+                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200" name="logo-instagram">
+                        </ion-icon>
                     </a>
-                    <a href="https://www.linkedin.com/in/haikal-al-fatih-95bb9b28a/" target="_blank" rel="noopener noreferrer">
-                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200"name="logo-linkedin"></ion-icon>
+                    <a href="https://www.linkedin.com/in/haikal-al-fatih-95bb9b28a/" target="_blank"
+                        rel="noopener noreferrer">
+                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200" name="logo-linkedin">
+                        </ion-icon>
                     </a>
                     <a href="https://wa.me/6282125043227" target="_blank" rel="noopener noreferrer">
-                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200" name="logo-whatsapp"></ion-icon>
+                        <ion-icon class="text-2xl text-black hover:scale-110 duration-200" name="logo-whatsapp">
+                        </ion-icon>
                     </a>
                 </div>
             </div>
@@ -94,23 +109,26 @@
     <section id="about" class="w-screen h-screen pt-20">
         <div class="about-me w-full h-full flex">
             <div class="gambar w-[40%] flex ">
-                <img class="" src="image/lel.png" alt="">
+                <img class="rounded-r-3xl" src="image/lel.png" alt="">
             </div>
             <div class="about-content w-[60%] flex flex-col justify-center pl-16">
-                <h1 class="text-4xl font-semibold">About Me</h1><br>
-                <p class="text-xl">i live in depok to be exact at jl srikandi perumahan alpha cluster no 88b
+                <h1 class="text-item text-4xl font-semibold">About Me</h1><br>
+                <p class="text-item text-xl">i live in depok to be exact at jl srikandi perumahan alpha cluster no 88b
                     harjamukti<br> depok on the
                     east east border, i was born in <span class="text-red-600">makassar</span> and my
                     junior high school<br> was al-bassam and my high school was in idn</p><br>
-                <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam dolorum <br>
+                <p class="text-item text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam
+                    dolorum <br>
                     fuga, quod nostrum delectus pariatur cupiditate iure enim provident odio commodi? <br> Distinctio ab
                     alias velit blanditiis doloribus tempora quos saepe consequuntur <br> mollitia iure suscipit culpa
                     facere ea voluptates, libero pariatur aspernatur.</p><br>
-                <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam dolorum <br>
+                <p class="text-item text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam
+                    dolorum <br>
                     fuga, quod nostrum delectus pariatur cupiditate iure enim provident odio commodi? <br> Distinctio ab
                     alias velit blanditiis doloribus tempora quos saepe consequuntur <br> mollitia iure suscipit culpa
                     facere ea voluptates, libero pariatur aspernatur.</p><br>
-                <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam dolorum <br>
+                <p class="text-item text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam magnam
+                    dolorum <br>
                     fuga, quod nostrum delectus pariatur cupiditate iure enim provident odio commodi? <br> Distinctio ab
                     alias velit blanditiis doloribus tempora quos saepe consequuntur <br> mollitia iure suscipit culpa
                     facere ea voluptates, libero pariatur aspernatur.</p>
@@ -130,13 +148,14 @@
                     <img class="rounded-t-lg w-[36%]" src="/image/html-asli.png" alt="" /><br>
                     <hr class="garis text-black w-full">
                 </a>
-                <div class="p-5 ">
+                <div class="p-5">
                     <a class="" href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-orange-500 ">HTML</h5>
+                        <h5 class="text-item mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-orange-500 ">HTML</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about HTML and in my opinion my skills in HTML are just good, not good but only good...</p>
+                    <p class="text-item mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about HTML and in my
+                        opinion my skills in HTML are just good, not good but only good...</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
+                        class="text-item inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -155,11 +174,12 @@
                 </a>
                 <div class="p-5">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-400">CSS</h5>
+                        <h5 class="text-item mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-blue-400">CSS</h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about CSS and in my opinion my skills in CSS are just good, not good but only good...</p>
+                    <p class="text-item mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about CSS and in my
+                        opinion my skills in CSS are just good, not good but only good...</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
+                        class="text-item inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -178,11 +198,13 @@
                 </a>
                 <div class="p-5">
                     <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-yellow-400">JavaScript</h5>
+                        <h5 class="text-itemmb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-yellow-400">JavaScript
+                        </h5>
                     </a>
-                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about JavaScript and in my opinion my skills in JavaScript are just good, not good but only good...</p>
+                    <p class="text-item mb-3 font-normal text-gray-700 dark:text-gray-400">I learned a lot about JavaScript and in
+                        my opinion my skills in JavaScript are just good, not good but only good...</p>
                     <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
+                        class="text-item inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-slate-800 rounded-lg hover:bg-white hover:text-slate-800 duration-300">
                         Read more
                         <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -203,6 +225,24 @@
         <div class="my-experience w-3/4 h-screen flex items-center mx-auto">
             <ol
                 class="w-full relative border-s border-gray-200 dark:border-gray-700 flex flex-col justify-center items-center pr-10">
+                <li class="mb-10 ms-6 pr-48">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="text-item pl-1 flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-black">
+                        Elementary School
+                    </h3>
+                    <time
+                        class="text-item pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Graduated
+                        on April 2020</time>
+                    <p class="text-item pl-1 mb-4 text-base font-normal text-gray-500 dark:text-gray-400">I have learn about
+                        general knowledge like math, science, social science<br> indonesia language and others.</p>
+                </li>
                 <li class="mb-10 ms-6">
                     <span
                         class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
@@ -212,25 +252,13 @@
                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                         </svg>
                     </span>
-                    <h3 class="pl-1 flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-black">Elementary School 
-                    </h3>
-                    <time class="pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Graduated
-                        on April 2020</time>
-                    <p class="pl-1 mb-4 text-base font-normal text-gray-500 dark:text-gray-400">I have learn about general knowledge like math, science, social science<br> indonesia language  and others.</p>
-                </li>
-                <li class="mb-10 ms-6">
-                    <span 
-                        class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-                        <svg class="w-2.5 h-2.5 text-blue-800 dark:text-blue-300" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                            <path
-                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
-                        </svg>
-                    </span>
-                    <h3 class="pl-1 mb-1 text-lg font-semibold text-gray-900 dark:text-black">Junior High School</h3>
-                    <time class="pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Graduated
+                    <h3 class="text-item pl-1 mb-1 text-lg font-semibold text-gray-900 dark:text-black">Junior High School</h3>
+                    <time
+                        class="text-item pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Graduated
                         on June 2023</time>
-                    <p class="pl-1 text-base font-normal text-gray-500 dark:text-gray-400">I have memorized the Al-quran and studied Islamic sciences like fiqih, arabic language, nahwu, tauhid and others leason about islam.</p>
+                    <p class="text-item pl-1 text-base font-normal text-gray-500 dark:text-gray-400">I have memorized the Al-quran
+                        and studied Islamic sciences like fiqih, arabic language, nahwu, tauhid and others leason about
+                        islam.</p>
                 </li>
                 <li class="ms-6">
                     <span
@@ -241,11 +269,16 @@
                                 d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                         </svg>
                     </span>
-                    <h3 class="pl-1 flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-black">Vocational School <span
-                        class="pl-1 bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span></h3>
-                    <time class="pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Joined
+                    <h3 class="text-item pl-1 flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-black">
+                        Vocational School <span
+                            class="pl-1 bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span>
+                    </h3>
+                    <time
+                        class="text-item pl-1 block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">Joined
                         on July 2023</time>
-                    <p class="pl-1 text-base font-normal text-gray-500 dark:text-gray-400">at this school (idn) I learned about programming languages such as HTML, CSS, JS, and PHP and I learned about frameworks such as Boostrap, Tailwind and Laravel</p>
+                    <p class="text-item pl-1 text-base font-normal text-gray-500 dark:text-gray-400">at this school (idn) I
+                        learned about programming languages such as HTML, CSS, JS, and PHP and I learned about
+                        frameworks such as Boostrap, Tailwind and Laravel</p>
                 </li>
             </ol>
             <div class="w-2/4 image-experience ">
@@ -265,47 +298,47 @@
                     <div class="md:flex md:justify-between">
                         <div class="mb-6 md:mb-0">
                             <a href="https://flowbite.com/" class="flex items-center">
-                                <img src="image/logo-ha 1.png" class="h-8 me-3"
-                                    alt="FlowBite Logo" />
+                                <img src="image/logo-ha 1.png" class="h-8 me-3" alt="FlowBite Logo" />
                                 <span
-                                    class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Haikal's Porto</span>
+                                    class="text-item self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Haikal's
+                                    Porto</span>
                             </a>
                         </div>
                         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Resources
+                                <h2 class="text-item mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Resources
                                 </h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
-                                        <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                                        <a href="https://flowbite.com/" class="text-item hover:underline">Flowbite</a>
                                     </li>
                                     <li>
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                                        <a href="https://tailwindcss.com/" class="text-item hover:underline">Tailwind CSS</a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Follow us
+                                <h2 class="text-item mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Follow me
                                 </h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
-                                        <a href="https://github.com/themesberg/flowbite"
-                                            class="hover:underline ">Github</a>
+                                        <a href="https://www.instagram.com/haikallfth/"
+                                            class="text-item hover:underline ">Github</a>
                                     </li>
                                     <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                                        <a href="https://www.instagram.com/haikallfth/" class="text-item hover:underline">Discord</a>
                                     </li>
                                 </ul>
                             </div>
                             <div>
-                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Legal
+                                <h2 class="text-item mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-black">Legal
                                 </h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
                                     <li class="mb-4">
-                                        <a href="#" class="hover:underline">Privacy Policy</a>
+                                        <a href="#" class="text-item hover:underline">Privacy Policy</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                                        <a href="#" class="text-item hover:underline">Terms &amp; Conditions</a>
                                     </li>
                                 </ul>
                             </div>
@@ -313,10 +346,10 @@
                     </div>
                     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
                     <div class="sm:flex sm:items-center sm:justify-between">
-                        <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a
-                                href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                        <span class="text-item text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a
+                                href="https://flowbite.com/" class="text-item hover:underline">Haikal™</a>. All Rights Reserved.
                         </span>
-                        <div class="flex mt-4 sm:justify-center sm:mt-0">
+                        <div class="flex mt-4 sm:justify-center sm:mt-0 ">
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-black">
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                                     fill="currentColor" viewBox="0 0 8 19">
@@ -324,7 +357,7 @@
                                         d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span class="sr-only">Facebook page</span>
+                                <span class="text-item sr-only">Facebook page</span>
                             </a>
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-black ms-5">
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -332,7 +365,7 @@
                                     <path
                                         d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
                                 </svg>
-                                <span class="sr-only">Discord community</span>
+                                <span class="text-item sr-only">Discord community</span>
                             </a>
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-black ms-5">
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +374,7 @@
                                         d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span class="sr-only">Twitter page</span>
+                                <span class="text-item sr-only">Twitter page</span>
                             </a>
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-black ms-5">
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -350,7 +383,7 @@
                                         d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span class="sr-only">GitHub account</span>
+                                <span class="text-item sr-only">GitHub account</span>
                             </a>
                             <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-black ms-5">
                                 <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -359,7 +392,7 @@
                                         d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span class="sr-only">Dribbble account</span>
+                                <span class="text-item sr-only">Dribbble account</span>
                             </a>
                         </div>
                     </div>
@@ -371,6 +404,8 @@
 
     <!-- End Contact Section -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
     <script>
         const navItems = document.querySelector('.nav-items')
 
@@ -379,7 +414,6 @@
             navItems.classList.toggle('top-[100%]')
         }
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 </body>
 
 </html>
